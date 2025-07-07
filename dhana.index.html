@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Portfolio | Dhanalakshmi</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    body {
+      background: #081b29;
+      color: #fff;
+      overflow-x: hidden;
+    }
+
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px 10%;
+      background: #081b29;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+    }
+
+    .logo {
+      font-size: 1.8rem;
+      font-weight: bold;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 25px;
+      list-style: none;
+    }
+
+    .nav-links a {
+      color: #fff;
+      text-decoration: none;
+      font-weight: 500;
+      position: relative;
+    }
+
+    .nav-links a::after {
+      content: '';
+      height: 2px;
+      background: cyan;
+      width: 0;
+      position: absolute;
+      bottom: -5px;
+      left: 0;
+      transition: 0.3s;
+    }
+
+    .nav-links a:hover::after {
+      width: 100%;
+    }
+
+    .home-section {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 100px 10%;
+      flex-wrap: wrap;
+    }
+
+    .content h1 {
+      font-size: 2rem;
+      margin-bottom: 10px;
+    }
+
+    .content h2 {
+      font-size: 2.5rem;
+      font-weight: bold;
+      color: cyan;
+    }
+
+    .content h3 {
+      font-size: 1.5rem;
+      margin-bottom: 15px;
+    }
+
+    .content p {
+      max-width: 500px;
+      line-height: 1.6;
+      margin-bottom: 25px;
+    }
+
+    .social-icons a {
+      margin-right: 15px;
+      color: #fff;
+      font-size: 1.4rem;
+      transition: 0.3s;
+    }
+
+    .social-icons a:hover {
+      color: cyan;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 10px 25px;
+      background: cyan;
+      color: #081b29;
+      font-weight: bold;
+      border-radius: 25px;
+      text-decoration: none;
+      transition: 0.3s;
+      margin-top: 20px;
+    }
+
+    .btn:hover {
+      background: #00c6d1;
+    }
+
+    .profile-pic img {
+      width: 300px;
+      height: 300px;
+      object-fit: cover;
+      border-radius: 50%;
+      border: 5px solid cyan;
+      box-shadow: 0 0 25px cyan, 0 0 60px #a200ff;
+      animation: glow 3s ease-in-out infinite alternate;
+    }
+
+    @keyframes glow {
+      0% {
+        box-shadow: 0 0 20px cyan;
+      }
+      100% {
+        box-shadow: 0 0 40px #a200ff;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .home-section {
+        flex-direction: column;
+        text-align: center;
+      }
+      .profile-pic {
+        margin-top: 40px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <nav>
+      <div class="logo">Portfolio</div>
+      <ul class="nav-links">
+        <li><a href="dhana.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="skills.html">Skills</a></li>
+        <li><a href="project.html">Project</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+  <section class="home-section">
+    <div class="content">
+      <h1>Hello, It's Me</h1>
+      <h2>Dhanalakshmi Ramesh</h2>
+      <h3>And I'm a <span class="typed-text"></span></h3>
+      <p>
+        I'm a passionate fresher in web development and UI/UX design.<br>
+        I love creating clean, responsive websites and user-friendly interfaces using HTML, CSS, and Figma.
+      </p>
+      <div class="social-icons">
+        <a href="https://wa.me/919566707046" target="_blank"><i class="fab fa-whatsapp"></i></a>
+        <a href="https://www.instagram.com/posterpulse_1?igsh=MXE3ZzJqbGJjOHRpZg==" target="_blank"><i class="fab fa-instagram"></i></a>
+        <a href="https://www.linkedin.com/in/dhanalakshmi-ramesh-66564631b" target="_blank"><i class="fab fa-linkedin"></i></a>
+      </div>
+      <a href="about.html" class="btn">More About Me</a>
+    </div>
+    <div class="profile-pic">
+      <img src="dhana image.jpg" alt="Profile Picture" />
+    </div>
+  </section>
+  <script>
+    const text = ["Web Developer & UI/UX Designer"];
+    let i = 0, j = 0, currentText = "", isDeleting = false;
+    const speed = 100;
+
+    function typeEffect() {
+      const typed = document.querySelector(".typed-text");
+
+      if (i < text.length) {
+        if (!isDeleting && j <= text[i].length) {
+          currentText = text[i].substring(0, j++);
+          typed.innerHTML = currentText;
+          setTimeout(typeEffect, speed);
+        } else if (isDeleting && j >= 0) {
+          currentText = text[i].substring(0, j--);
+          typed.innerHTML = currentText;
+          setTimeout(typeEffect, speed / 2);
+        }
+
+        if (j == text[i].length) isDeleting = true;
+        if (isDeleting && j === 0) {
+          isDeleting = false;
+          i = (i + 1) % text.length;
+          setTimeout(typeEffect, 500);
+        }
+      }
+    }
+
+    window.onload = typeEffect;
+  </script>
+
+</body>
+</html>

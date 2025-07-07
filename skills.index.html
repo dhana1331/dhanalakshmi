@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>My Skills</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    body {
+      background: #081b29;
+      color: #fff;
+    }
+
+    /* HEADER */
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px 10%;
+      background: #081b29;
+      border-bottom: 1px solid #1f1f1f;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+
+    header h1 {
+      font-size: 24px;
+      font-weight: bold;
+      color: #fff;
+    }
+
+    nav a {
+      margin-left: 20px;
+      text-decoration: none;
+      color: #fff;
+      font-weight: 500;
+      transition: color 0.3s ease;
+    }
+
+    nav a:hover {
+      color: cyan;
+    }
+
+    /* SKILLS SECTION */
+    .skills-section {
+      text-align: center;
+      padding: 50px 10%;
+    }
+
+    .skills-section h2 {
+      font-size: 2.5rem;
+      margin-bottom: 40px;
+    }
+
+    .skills-section h2 span {
+      color: cyan;
+    }
+
+    .skills-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: 50px;
+    }
+
+    /* TECHNICAL SKILLS */
+    .technical-skills, .professional-skills {
+      flex: 1;
+    }
+
+    .technical-skills h3,
+    .professional-skills h3 {
+      font-size: 1.3rem;
+      margin-bottom: 20px;
+      border-bottom: 2px solid cyan;
+      display: inline-block;
+      padding-bottom: 5px;
+    }
+
+    .skill {
+      margin-bottom: 20px;
+    }
+
+    .skill label {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 5px;
+    }
+
+    .bar {
+      width: 100%;
+      height: 10px;
+      background: #1f1f1f;
+      border-radius: 5px;
+      overflow: hidden;
+    }
+
+    .bar-fill {
+      height: 100%;
+      background: cyan;
+      width: 0;
+      animation: fillBar 2s ease forwards;
+    }
+
+    .html { animation-delay: 0s; }
+    .css { animation-delay: 0.3s; }
+    .javascript { animation-delay: 0.6s; }
+    .c { animation-delay: 0.9s; }
+
+    @keyframes fillBar {
+      to { width: var(--fill); }
+    }
+
+    /* PROFESSIONAL SKILLS */
+    .professional-skills {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .professional-skills-container {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 30px;
+      justify-content: center;
+      margin-top: 20px;
+    }
+
+    .circle-skill {
+      text-align: center;
+    }
+
+    .circle {
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+      background: conic-gradient(cyan var(--percent), #1f1f1f 0);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 10px;
+    }
+
+    .circle span {
+      font-weight: bold;
+      font-size: 1.1rem;
+      color: #fff;
+    }
+
+    @media (max-width: 768px) {
+      .skills-container {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      header {
+        flex-direction: column;
+      }
+
+      nav a {
+        margin: 10px 0;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Portfolio</h1>
+    <nav>
+      <a href="dhana.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="services.html">Services</a>
+      <a href="skills.html">Skills</a>
+      <a href="project.html">Project</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
+
+  <section class="skills-section" id="skills">
+    <h2>My <span>Skills</span></h2>
+    <div class="skills-container">
+
+      <div class="technical-skills">
+        <h3>Technical Skills</h3>
+
+        <div class="skill">
+          <label>HTML <span>90%</span></label>
+          <div class="bar"><div class="bar-fill html" style="--fill:90%;"></div></div>
+        </div>
+
+        <div class="skill">
+          <label>CSS <span>75%</span></label>
+          <div class="bar"><div class="bar-fill css" style="--fill:75%;"></div></div>
+        </div>
+
+        <div class="skill">
+          <label>JavaScript <span>65%</span></label>
+          <div class="bar"><div class="bar-fill javascript" style="--fill:65%;"></div></div>
+        </div>
+
+        <div class="skill">
+          <label>C <span>85%</span></label>
+          <div class="bar"><div class="bar-fill c" style="--fill:85%;"></div></div>
+        </div>
+      </div>
+      <div class="professional-skills">
+        <h3>Professional Skills</h3>
+        <div class="professional-skills-container">
+          <div class="circle-skill">
+            <div class="circle" style="--percent: 90%;"><span>90%</span></div>
+            <p>Creativity</p>
+          </div>
+          <div class="circle-skill">
+            <div class="circle" style="--percent: 60%;"><span>60%</span></div>
+            <p>Communication</p>
+          </div>
+          <div class="circle-skill">
+            <div class="circle" style="--percent: 85%;"><span>85%</span></div>
+            <p>Problem Solving</p>
+          </div>
+          <div class="circle-skill">
+            <div class="circle" style="--percent: 85%;"><span>85%</span></div>
+            <p>Teamwork</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+</body>
+</html>

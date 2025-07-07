@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Contact Me</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      background: #081b29;
+      color: #fff;
+    }
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px 10%;
+      background: #081b29;
+      border-bottom: 1px solid #1f1f1f;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+
+    header h1 {
+      font-size: 24px;
+      font-weight: bold;
+      color: #fff;
+    }
+
+    nav a {
+      margin-left: 20px;
+      text-decoration: none;
+      color: #fff;
+      font-weight: 500;
+      transition: color 0.3s ease;
+    }
+
+    nav a:hover {
+      color: cyan;
+    }
+    .contact-section {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      padding: 60px 10%;
+      background: #081b29;
+    }
+
+    .contact-info {
+      flex: 1;
+      min-width: 300px;
+      margin-bottom: 30px;
+    }
+
+    .contact-info h2 {
+      font-size: 2rem;
+      margin-bottom: 10px;
+    }
+
+    .contact-info h2 span {
+      color: cyan;
+    }
+
+    .contact-info h4 {
+      margin-top: 10px;
+      margin-bottom: 15px;
+      font-size: 1.2rem;
+      color: #fff;
+    }
+
+    .contact-info p {
+      margin: 15px 0;
+      line-height: 1.6;
+      color: #ddd;
+    }
+
+    .contact-info .info-item {
+      margin: 10px 0;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .contact-info .info-item i {
+      color: cyan;
+    }
+
+    .social-icons {
+      margin-top: 20px;
+    }
+
+    .social-icons a {
+      margin-right: 15px;
+      color: cyan;
+      font-size: 20px;
+      text-decoration: none;
+    }
+
+    .contact-form {
+      flex: 1;
+      min-width: 300px;
+    }
+
+    .contact-form form {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+    }
+
+    .contact-form input,
+    .contact-form textarea {
+      padding: 10px 15px;
+      background: #fff;
+      border: none;
+      border-radius: 5px;
+      outline: none;
+      color: #333;
+      font-size: 14px;
+    }
+
+    .contact-form textarea {
+      resize: none;
+      min-height: 100px;
+    }
+
+    .contact-form button {
+      padding: 12px;
+      background: cyan;
+      border: none;
+      border-radius: 25px;
+      font-weight: bold;
+      cursor: pointer;
+      transition: 0.3s ease;
+      box-shadow: 0 0 10px cyan, 0 0 20px cyan;
+    }
+
+    .contact-form button:hover {
+      background: #00ffff;
+      box-shadow: 0 0 20px cyan, 0 0 30px cyan;
+    }
+
+    @media(max-width: 768px) {
+      header {
+        flex-direction: column;
+      }
+
+      nav a {
+        margin: 10px 0;
+      }
+
+      .contact-section {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .contact-form, .contact-info {
+        width: 100%;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Portfolio.</h1>
+    <nav>
+      <a href="dhana.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="services.html">Services</a>
+      <a href="skills.html">Skills</a>
+      <a href="project.html">Project</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
+
+  <section class="contact-section" id="contact">
+    <div class="contact-info">
+      <h2>Contact <span>Me</span></h2>
+      <h4>Let's Work Together</h4>
+      <p>I’m passionate about creating user-friendly websites and intuitive designs. Let’s connect and bring your ideas to life through clean code and creative UI/UX solutions!</p>
+
+      <div class="info-item">
+        <i class="fas fa-envelope"></i> dhanalakshmi24174@gmail.com
+      </div>
+      <div class="info-item">
+        <i class="fas fa-phone"></i> 9566707046
+      </div>
+
+      <div class="social-icons">
+        <a href="https://wa.me/919566707046" target="_blank"><i class="fab fa-whatsapp"></i></a>
+        <a href="https://www.instagram.com/posterpulse_1?igsh=MXE3ZzJqbGJjOHRpZg==" target="_blank"><i class="fab fa-instagram"></i></a>
+        <a href="https://www.linkedin.com/in/dhanalakshmi-ramesh-66564631b" target="_blank"><i class="fab fa-linkedin"></i></a>
+      </div>
+    </div>
+
+    <div class="contact-form">
+      <form>
+        <input type="text" placeholder="Enter Your Name" required>
+        <input type="email" placeholder="Enter Your Email" required>
+        <input type="text" placeholder="Enter Your Subject" required>
+        <textarea placeholder="Enter Your Message" required></textarea>
+        <button type="submit">Submit</button>
+      </form>
+    </div>
+  </section>
+
+</body>
+</html>
